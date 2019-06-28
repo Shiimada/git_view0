@@ -9,7 +9,26 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+ <body>
+    <header>
+     <h1>サンプルサイト</h1>
+      <nav>
+       <ul>
+         <li><a href="index.html">ホーム</a></li>
+         <li><a href="menu01.html">メニュー1</a></li>
+         <li><a href="menu02.html">メニュー2</a></li>
+       </ul>
+     </nav>
+   </header>
     <%= yield %>
+     <footer>
+        <nav>
+          <ul>
+             <li><a href="index.html">ホーム</a></li>
+             <li><a href="menu01.html">メニュー1</a></li>
+             <li><a href="menu02.html">メニュー2</a></li>
+          </ul>
+      </nav>
+    </footer>
   </body>
 </html>
