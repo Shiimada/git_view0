@@ -6,6 +6,7 @@ html, body {
     padding: 0;
     height: 100%;
     color: #000000;
+    width: 100%;
 }
 
 header{
@@ -37,7 +38,9 @@ header{
   padding-bottom: 100px;
 }
 .flex > *{
-  min-width: 30%;
+//   min-width: 30%
+width: 50%;
+;
   flex-basis: 30%;
   background: #fff;
   font-size: 64px;
@@ -51,26 +54,30 @@ header{
 }
 
 // CSS
-.list{
-    min-width: 30%;
+// .list{
+//     // min-width: 30%;
+//     width: 20%;
 // 	margin: 10px 10px 10px 10px;
-	list-style-type: none;
-	overflow: hidden;
+// 	list-style-type: none;
+// 	overflow: hidden;
+// 	padding-bottom: 100px;
 	
-}
-.list li{
-	margin: 50px 20px 50px 20px;
-	float: left;
-	transition: .8s;
-}
+// }
+// .list li{
+// 	margin: 50px 20px 50px 20px;
+// 	float: left;
+// 	transition: .8s;
+	
+// }
 
-.list-mv02{
-	opacity: 0;
-}
-.mv02{
-	opacity: 1.0;
-	
-}
+// .list-mv02{
+// 	opacity: 0;
+// 		padding-bottom: 100px;
+// }
+// .mv02{
+// 	opacity: 1.0;
+// 		padding-bottom: 100px;
+// }
 
 // #main {
 //     padding-bottom: 100px;
