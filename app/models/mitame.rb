@@ -1,0 +1,2 @@
+class Mitame < ApplicationRecord
+end
