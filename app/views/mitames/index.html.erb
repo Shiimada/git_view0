@@ -3,13 +3,16 @@
 
 <div class="flex">
 
-
-  <ul class="list">
-	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
+ <div class="main">
+   <% @mitames.each do |tweet| %>
+     <ul class="list">
+	    <li class="list-mv02"><img src="common/img/01.jpg"></li>
+	    <li class="list-mv02"><img src="common/img/02.jpg"></li>
 	
-	 <div style="text-align : righit"><a href="https://master.tech-camp.in/"> more...</a></div>
-	 </ul>
+	    <div style="text-align : righit"><a href="https://master.tech-camp.in/"> more...</a></div>
+	   </ul>
+	  <% end %>
+ </div>
 	 
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
@@ -39,7 +42,8 @@
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
 	<li class="list-mv02"><img src="common/img/02.jpg"></li>
 	
-	 <div style="text-align : righit"><a href="https://master.tech-camp.in/"> more...</a></div>
+	 <div style="text-align : righit"><a href="https://master.tech-camp.in/"> techcamp</a></div>
+	 <div style="text-align : righit"><a href="/mitames/:id(.:format)"> more...</a></div>
 	 </ul>
 	 
 <ul class="list">
