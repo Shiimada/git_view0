@@ -27,6 +27,7 @@ header{
   height: auto !important;
   height: 100%;
   min-height: 100%;
+   padding-bottom: 100px;
 }
 
 .flex{
@@ -95,20 +96,23 @@ width: 50%;
 form {
 
   input,textarea {
-    width: 100%;
+    width: 60%;
     border-radius: 5px;
     font-family: "游ゴシック", "YuGothic";
+    // padding-bottom: 100px;
   }
   input[type="submit"] {
-    
-    border-radius: 20px;
+    width: 30%;
+    border-radius: 10px;
     color: #fff;
     border: 0;
     font-size: 18px;
+    
     &:hover {
      
     }
   }
+  
 }
 
 footer{
