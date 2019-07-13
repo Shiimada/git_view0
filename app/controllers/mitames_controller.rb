@@ -1,9 +1,11 @@
 class MitamesController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
   def index
     @mitames = Mitame.all
   end
   
   def show
+    @mitames = Mitame.find(params[:id])
   end
   
   def new
@@ -14,7 +16,7 @@ class MitamesController < ApplicationController
   end
   
   private
-  def miatme_params
+  def mitame_params
     params.permit(:name, :image, :text)
   end
 
