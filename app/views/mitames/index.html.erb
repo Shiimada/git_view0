@@ -3,46 +3,35 @@
 
 <div class="flex">
 
- <div class="main">
    <% @mitames.each do |mitame| %>
-     <ul class="list">
-     	<div class="box2">
-     	 <p>penname: <%= mitame.name %></p>
-     	  <p>penname: <%= mitame.image %></p>
-       <p><%= simple_format(mitame.text) %></p>
-	     <div style="text-align : righit"><a href="https://master.tech-camp.in/"> more...</a></div>
-	     </div>
-	   </ul>
-	  <% end %>
- </div>
+    <ul class="list">
+     <li class="list-mv02"" style="background-image: url(<%= mitame.image %>);">
+      <%= simple_format(mitame.text) %>
+      <span class="name"><%= mitame.name %></span>
+     </li>
+	</ul>
+   <% end %>
 	 
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
-	<li class="list-mv02"><img src="common/img/03.jpg"></li>
 </ul>
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
+
 </ul>
 
  <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
-	<li class="list-mv02"><img src="common/img/03.jpg"></li>
 </ul>
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
-	<li class="list-mv02"><img src="common/img/03.jpg"></li>
 </ul>
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
+	
 </ul>
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
 	
 	 <div style="text-align : righit"><a href="https://master.tech-camp.in/"> techcamp</a></div>
 	 <div style="text-align : righit"><a href="/mitames/:id(.:format)"> more...</a></div>
@@ -50,27 +39,20 @@
 	 
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
-	<li class="list-mv02"><img src="common/img/03.jpg"></li>
 </ul>
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
+
 </ul>
 
  <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
-	<li class="list-mv02"><img src="common/img/03.jpg"></li>
 </ul>
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
-	<li class="list-mv02"><img src="common/img/03.jpg"></li>
 </ul>
 <ul class="list">
 	<li class="list-mv02"><img src="common/img/01.jpg"></li>
-	<li class="list-mv02"><img src="common/img/02.jpg"></li>
 </ul>
 </div>
 </div>

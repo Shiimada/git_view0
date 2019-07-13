@@ -1,5 +1,5 @@
 class MitamesController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  # before_action :move_to_index, except: [:index, :show]
   def index
     @mitames = Mitame.all
   end
