@@ -8,7 +8,11 @@
      <li class="list-mv02"" style="background-image: url(<%= mitame.image %>);">
       <%= simple_format(mitame.text) %>
       <span class="name"><%= mitame.name %></span>
+      <p><%= link_to '詳細', "/mitames/#{mitame.id}", method: :get %></li>
      </li>
+     <!--<li>-->
+     <!--         <%= link_to '詳細', "/mitames/#{mitame.id}", method: :get %>-->
+     <!--</li>-->
 	</ul>
    <% end %>
 	 

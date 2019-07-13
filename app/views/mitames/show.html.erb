@@ -1,20 +1,7 @@
-  <div class="box1">
-           <p>image:<%= @mitame.image %></p>
-          <%= simple_format(@mitame.image) %>
-  </div>
   <div class="box2">
-           <p>  レシピ:<%= @mitame.text %></p>
-          <%= simple_format(@mitame.text) %>
-  </div>
-  <div class="box3">
-           <p>作り方</p>
-         
-  </div>
-  <div class="box4">
-           <p>かかった時間</p>
-          
-  </div>
-  <div class="box5">
-           <p>合計金額</p>
-         
-  </div>
+     <li class="list-mv02"" style="background-image: url(<%= @mitame.image %>);">
+      <%= simple_format(@mitame.text) %>
+     </li>
+ 
+       
+ </div>
