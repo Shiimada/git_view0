@@ -1,6 +1,7 @@
 class MitamesController < ApplicationController
-  # before_action :move_to_index, except: [:index, :show]
-  # before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
+# before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
+
+before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
  def show
     @mitame = Mitame.find(params[:id])
  end
@@ -13,6 +14,29 @@ class MitamesController < ApplicationController
   def create
     Mitame.create(mitame_params)
   end
+  
+  def destroy
+   mitame = Mitame.find(params[:id])
+   mitame.destroy
+   redirect_to action: 'index'
+  end
+ 
+ 
+ def edit
+  
+ end
+ 
+ def update
+  respond_to do |format|
+   if @mitame.update(tweet_params)
+    format.html {redirect_to @mitame, notice: 'Completed!!!!' }
+    format.json {render :show, status: :ok, location: @mitame }
+   else
+    format.html {render :edit }
+    format.json {render json: @book.errors, status: :unprocessable_entity }
+   end
+  end
+ end
   
   private
   def mitame_params
