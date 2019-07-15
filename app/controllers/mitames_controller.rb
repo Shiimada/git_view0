@@ -28,7 +28,7 @@ before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
  
  def update
   respond_to do |format|
-   if @mitame.update(tweet_params)
+   if @mitame.update(mitame_params)
     format.html {redirect_to @mitame, notice: 'Completed!!!!' }
     format.json {render :show, status: :ok, location: @mitame }
    else
