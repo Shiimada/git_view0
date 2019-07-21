@@ -6,7 +6,7 @@ before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
     @mitame = Mitame.find(params[:id])
  end
   def index
-    @mitames = Mitame.all
+    @mitames = Mitame.order("created_at DESC").page(params[:page]).per(9)
   end
   def new
   end
