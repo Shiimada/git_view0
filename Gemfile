@@ -70,3 +70,5 @@ gem 'hirb-unicode'
 gem 'jquery-rails'
 
 gem 'kaminari'
+
+gem 'devise'
