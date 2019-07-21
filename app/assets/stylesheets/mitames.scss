@@ -27,40 +27,39 @@ header{
   height: auto !important;
   height: 100%;
   min-height: 100%;
-   padding-bottom: 100px;
+   padding-bottom: 50px;
 }
 
 .inline-block_test {
     display: inline-block;      /* インラインブロック要素にする */          /* 余白指定 */
-    height: 100px;     
+    height: 400px;     
      width: 100%;
-      padding: 10px 10px 10px 10px;
-    // float: left;
+      padding: 10px 0px 0px 0px;
+      columns: 2;
+}
+.inline-block_test2 {
+    display: inline-block;      /* インラインブロック要素にする */          /* 余白指定 */
+    height: 400px;     
+     width: 100%;
 }
 .box1 {
-    height: 80px;     
-      padding: 10px;
-    margin: 10px 0px 10px 10px;
-    display: inline-block;    
+    display: inline-block; 
     height: 350px;
-    width: 31%;
-    // float: left;
+    width: 15%;
 }
 .box2 {
-    // padding: 10px;
-    // margin: 10px 10px 10px 0px;
     display: inline-block;    
     height: 350px;
-    width: 31%;
+    width: 62%;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px gray;/*線*/
     border-radius: 10px;/*角の丸み*/
-    // padding-bottom: 100px;
+    overflow-y:scroll;
+    float: left;
 }
 .box3 {
     padding: 10px;
-    margin: 10px 10px 10px 10px;
     display: inline-block;    
     height: 100px;
     width: 31%;
@@ -68,11 +67,12 @@ header{
     background: #FFF;
     border: solid 3px gray;/*線*/
     border-radius: 10px;/*角の丸み*/
+    margin: 0px 0px 10px 10px;
+    overflow-y:scroll;
     // padding-bottom: 100px;
 }
 .box4 {
     padding: 10px;
-    margin: 10px 10px 10px 10px;
     display: inline-block;    
     height: 100px;
     width: 31%;
@@ -80,18 +80,19 @@ header{
     background: #FFF;
     border: solid 3px gray;/*線*/
     border-radius: 10px;/*角の丸み*/
-    // padding-bottom: 100px;
+    margin: 10px 0px 10px 10px;
+    overflow-y:scroll;
 }
 .box5 {
     padding: 10px;
-    margin: 10px 10px 10px 10px;
     display: inline-block;    
     height: 100px;
-    width: 31%;
+    width: 62%;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px gray;/*線*/
     border-radius: 10px;/*角の丸み*/
+    overflow-y:scroll;
     // padding-bottom: 100px;
 }
 
@@ -173,7 +174,24 @@ form {
   }
   
 }
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+  font-size: medium;
+}
 
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+  font-size: medium;
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
+  font-size: medium;
+}
 
 footer{
     width: 100%;

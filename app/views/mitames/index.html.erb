@@ -1,4 +1,15 @@
 <!--<div class="container">-->
+<% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
+  <!-- ユーザーがログインしていた時の処理 -->
+   <h6>&ensp; 現在 <%= current_user.id %> さんがログインしています </h6> <!-- ここを追加します -->
+  <h6> &ensp;メールアドレス： <%= current_user.email %> </h6>
+ &ensp; <%=link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
+<% else %>
+  <!-- ユーザーがログインしていなかった時の処理 -->
+  <h6> &ensp;現在ログインしていませんけど。。。。。 </h6>
+  &ensp;<%= link_to "ログイン", new_user_session_path, class: 'post' %> <!-- ログイン画面に移行する -->
+  &ensp;<%= link_to "新規登録", new_user_registration_path, class: 'post' %> <!-- 新規登録画面に移行する -->
+<% end %>
 <div class="container">
 
 <div class="flex">
@@ -12,7 +23,7 @@
      </li>
 	</ul>
    <% end %>
-    <h1><%= paginate(@mitames) %></h>
+    <%= paginate(@mitames) %>
 	 
 
 </div>

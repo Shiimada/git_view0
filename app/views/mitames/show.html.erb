@@ -1,26 +1,25 @@
 <center><div class="container">
 
 <div class="inline-block_test">
-  <div class=box1>
-    <%=image_tag @mitame.image, :size =>'400x400' %>
-   
+ <div class=box1>
+    <%=image_tag @mitame.image, :size =>'350x350' %>
   </div>
-  
-
-   <div class="box2" >
-      <!--<textarea name="text" placeholder="text" rows="20" cols="50"></textarea>-->
-    </div>
+   <p><div class="box2" >
+   <%= simple_format(@mitame.text) %>
+    </div></p>
+</div>
+<div class="inline-block_test2">
       <div class="box3" >
-      <!--<textarea name="text" placeholder="text" rows="20" cols="50"></textarea>-->
-    </div>
+        かかった時間
+      </div>
       <div class="box4" >
-      <!--<textarea name="text" placeholder="text" rows="20" cols="50"></textarea>-->
-    </div>  
+      </div>  
     <div class="box5" >
-      <!--<textarea name="text" placeholder="text" rows="20" cols="50"></textarea>-->
     </div> 
+    <p>
     <%= link_to '編集', edit_mitame_path(@mitame) %>
     <%= link_to '削除',"/mitames/#{@mitame.id}", method: :delete %>
+    </p>
 </div>
  
 

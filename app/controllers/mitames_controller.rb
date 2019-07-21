@@ -1,6 +1,8 @@
 class MitamesController < ApplicationController
 # before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
 
+before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
+
 before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
  def show
     @mitame = Mitame.find(params[:id])
