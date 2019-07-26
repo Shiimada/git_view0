@@ -5,16 +5,45 @@
     <%=image_tag @mitame.image, :size =>'350x350' %>
   </div>
    <p><div class="box2" >
-   <%= simple_format(@mitame.text) %>
-    </div></p>
-</div>
-<div class="inline-block_test2">
-      <div class="box3" >
+      <材料>
+       <p></p>
+        <form method="get" action="output.html" oninput="result.value = Number(a.value) + Number(b.value)+ Number(c.value)+ Number(d.value)+ Number(e.value);">
+        <p>ごはん<input type="number" name="a" value="0"style="width:80px;" >
+        <p>+ </p>たまご<input type="number" name="b" value="0" style="width:80px;" >
+        <p>+ </p>たまご<input type="number" name="c" value="0" style="width:80px;" >
+        <p>+ </p>たまご<input type="number" name="d" value="0" style="width:80px;" >
+        <p>+ </p>たまご<input type="number" name="e" value="0" style="width:80px;" ></p>
+
+    </div></p> 
+    
+    <div class="box3" >
         かかった時間
       </div>
       <div class="box4" >
+       金額
+  
+       <p>計算結果：<output name="result">0</output></p>
+       
+       <script>
+       var score = "result"
+if (score >= 501) {
+document.write(“Goood”);
+} else {
+document.write(“ワンコインじゃ作れないんですけど、、、、。”);
+}
+</script>
+
+      <!--<p><input type="submit" value="送信する"> <input type="reset" value="リセット"></p>-->
+
+       </form>
       </div>  
-    <div class="box5" >
+</div>
+<div class="inline-block_test2">
+    
+    <div class="box5" > <作り方＞ 
+     <div align="left">
+      <%= simple_format(@mitame.text) %>
+     </div>
     </div> 
     <p>
     <%= link_to '編集', edit_mitame_path(@mitame) %>

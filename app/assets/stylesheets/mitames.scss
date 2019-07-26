@@ -15,7 +15,7 @@ header{
     color:#FFFFCC	;
     display: inline-block;
      text-align: center;
-    padding: 5px 10px 40px 10px;
+    // padding: 5px 10px 10px 10px;
     // border: 3px solid #aaa;
     height: 100px;
    
@@ -27,7 +27,7 @@ header{
   height: auto !important;
   height: 100%;
   min-height: 100%;
-   padding-bottom: 50px;
+   padding-bottom: 30px;
 }
 
 .inline-block_test {
@@ -36,6 +36,8 @@ header{
      width: 100%;
       padding: 10px 0px 0px 0px;
       columns: 2;
+      margin: 0px;
+      
 }
 .inline-block_test2 {
     display: inline-block;      /* インラインブロック要素にする */          /* 余白指定 */
@@ -57,12 +59,13 @@ header{
     border-radius: 10px;/*角の丸み*/
     overflow-y:scroll;
     float: left;
+    padding: 10px;
 }
 .box3 {
-    padding: 10px;
+    // padding: 10px;
     display: inline-block;    
     height: 100px;
-    width: 31%;
+    width: 30%;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px gray;/*線*/
@@ -72,10 +75,10 @@ header{
     // padding-bottom: 100px;
 }
 .box4 {
-    padding: 10px;
+    // padding: 10px;
     display: inline-block;    
     height: 100px;
-    width: 31%;
+    width: 30%;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px gray;/*線*/
@@ -84,7 +87,7 @@ header{
     overflow-y:scroll;
 }
 .box5 {
-    padding: 10px;
+    // padding: 10px;
     display: inline-block;    
     height: 100px;
     width: 62%;
@@ -103,7 +106,7 @@ header{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 .flex > *{
 //   min-width: 30%
@@ -148,7 +151,7 @@ width: 50%;
 }
 .mv02{
 	opacity: 1.0;
-		padding-bottom: 100px;
+		padding-bottom: 30px;
 		
 }
 
