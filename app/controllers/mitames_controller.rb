@@ -25,7 +25,7 @@ before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
  
  
  def edit
-  
+   @mitame = Mitame.find(params[:id])
  end
  
  def update

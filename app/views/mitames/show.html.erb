@@ -2,7 +2,7 @@
 
 <div class="inline-block_test">
  <div class=box1>
-    <%=image_tag @mitame.image, :size =>'350x350' %>
+     <div class="image" style="background-image: url(<%= rails_blob_path(@mitame.image) %>) "></div>
   </div>
    <p><div class="box2" >
       <材料>
@@ -13,7 +13,6 @@
         <p>+ </p>たまご<input type="number" name="c" value="0" style="width:80px;" >
         <p>+ </p>たまご<input type="number" name="d" value="0" style="width:80px;" >
         <p>+ </p>たまご<input type="number" name="e" value="0" style="width:80px;" ></p>
-
     </div></p> 
     
     <div class="box3" >
@@ -25,11 +24,11 @@
        <p>計算結果：<output name="result">0</output></p>
        
        <script>
-       var score = "result"
+       var score = "result.value"
 if (score >= 501) {
-document.write(“Goood”);
+document.write(“ワンコインじゃ作れないんですけど、、、、”);
 } else {
-document.write(“ワンコインじゃ作れないんですけど、、、、。”);
+document.write(“good”);
 }
 </script>
 
@@ -44,8 +43,11 @@ document.write(“ワンコインじゃ作れないんですけど、、、、�
      <div align="left">
       <%= simple_format(@mitame.text) %>
      </div>
+     </div>
+    <p></p>    
+    <div class="box6" > <コメント＞ 
     </div> 
-    <p>
+      <p>
     <%= link_to '編集', edit_mitame_path(@mitame) %>
     <%= link_to '削除',"/mitames/#{@mitame.id}", method: :delete %>
     </p>

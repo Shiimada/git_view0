@@ -72,3 +72,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 
 gem 'devise'
+
+gem 'jquery-ui-rails'
+
+gem 'mini_magick'
