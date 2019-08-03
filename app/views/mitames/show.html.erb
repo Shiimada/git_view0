@@ -2,7 +2,7 @@
 
 <div class="inline-block_test">
  <div class=box1>
-     <div class="image" style="background-image: url(<%= rails_blob_path(@mitame.image) %>) "></div>
+     <div class="image" style="background-image: url(<%= @mitame.image %>) "></div>
   </div>
    <p><div class="box2" >
       <材料>
@@ -45,14 +45,20 @@ document.write(“good”);
      </div>
      </div>
     <p></p>    
+  
     <div class="box6" > <コメント＞ 
     </div> 
       <p>
     <%= link_to '編集', edit_mitame_path(@mitame) %>
     <%= link_to '削除',"/mitames/#{@mitame.id}", method: :delete %>
     </p>
+    
+    <div class="container"> 
+    <!-- ここからフォーム -->
+      <%= form_tag("/mitames/#{@mitame.id}/comments", method: :post) do %>
+        <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
+        <input type="submit" value="SENT">
+      <% end %>
+  </div>
 </div>
  
-
-</div>
-</center>

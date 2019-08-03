@@ -11,10 +11,11 @@ before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
     @mitames = Mitame.order("created_at DESC").page(params[:page]).per(9)
   end
   def new
+   @mitame = Mitame.new
   end
   
   def create
-    Mitame.create(mitame_params)
+     @mitame = Mitame.new(mitame_params)
   end
   
   def destroy
@@ -42,7 +43,7 @@ before_action :set_mitame, only: [ :show, :edit, :update, :destroy]
   
   private
   def mitame_params
-    params.permit(:name, :image, :text)
+    params.require(:mitame).permit(:name, :image, :text)
   end
   
  def set_mitame

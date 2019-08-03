@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_27_072153) do
+ActiveRecord::Schema.define(version: 2019_08_03_093118) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -34,7 +34,8 @@ ActiveRecord::Schema.define(version: 2019_07_27_072153) do
   end
 
   create_table "memos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "text"
+    t.integer "mitame_id"
+    t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,6 +46,17 @@ ActiveRecord::Schema.define(version: 2019_07_27_072153) do
     t.text "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text "zairyou1"
+    t.text "zairyou2"
+    t.text "zairyou3"
+    t.text "zairyou4"
+    t.text "zairyou5"
+    t.integer "price1"
+    t.integer "price2"
+    t.integer "price3"
+    t.integer "price4"
+    t.integer "price5"
+    t.integer "total"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
